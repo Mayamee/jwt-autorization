@@ -49,7 +49,6 @@ class UserService {
     await user.save();
   }
   async login(email, password) {
-    //TODO: есть момент с неактивированным пользователем
     // ищем пользователя по email
     const user = await UserModel.findOne({ email });
     if (!user) {
